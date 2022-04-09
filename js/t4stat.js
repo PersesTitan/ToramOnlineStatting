@@ -33,8 +33,8 @@ const OPTIONS = [
     { "name": "MATK", "mat": "목재", "pot": 3, "cost": "16.49", "cat": "Enhance Attack", "type": "w", bonus: 1 },
     { "name": "MATK %", "mat": "목재", "pot": 10, "cost": 50, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 0.5 },
     { "name": "안정율 %", "mat": "약품", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "u" },
-    { "name": "물리 내성 %", "mat": "짐승", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
-    { "name": "마법 내성 %", "mat": "목재", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
+    { "name": "물리 관통 %", "mat": "짐승", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
+    { "name": "마법 관통 %", "mat": "목재", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
 
     { "name": "DEF", "mat": "금속", "pot": 3, "cost": "16.49", "cat": "Enhance Defense", "type": "a", bonus: 10 },
     { "name": "DEF %", "mat": "금속", "pot": 10, "cost": 50, "cat": "Enhance Defense", "type": "a", bonus: 1, bonusratio: 1 / 3 },
