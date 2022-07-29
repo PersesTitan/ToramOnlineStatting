@@ -1,6 +1,6 @@
 
 const MAX_STEPS = 20;
-const BONUS_STEPS = 4;
+const BONUS_STEPS = 5;
 const SLOTS = 8;
 
 const PENALTY_DATA = [0, 0, 20, 45, 80, 125, 180, 245, 320];
@@ -33,8 +33,8 @@ const OPTIONS = [
     { "name": "MATK", "mat": "목재", "pot": 3, "cost": "16.49", "cat": "Enhance Attack", "type": "w", bonus: 1 },
     { "name": "MATK %", "mat": "목재", "pot": 10, "cost": 50, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 0.5 },
     { "name": "안정율 %", "mat": "약품", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "u" },
-    { "name": "물리 관통 %", "mat": "짐승", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
-    { "name": "마법 관통 %", "mat": "목재", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 1 / 3 },
+    { "name": "물리 관통 %", "mat": "짐승", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 2 / 5 },
+    { "name": "마법 관통 %", "mat": "목재", "pot": 20, "cost": 100, "cat": "Enhance Attack", "type": "w", bonus: 1, bonusratio: 2 / 5 },
 
     { "name": "DEF", "mat": "금속", "pot": 3, "cost": "16.49", "cat": "Enhance Defense", "type": "a", bonus: 10 },
     { "name": "DEF %", "mat": "금속", "pot": 10, "cost": 50, "cat": "Enhance Defense", "type": "a", bonus: 1, bonusratio: 1 / 3 },
@@ -53,10 +53,10 @@ const OPTIONS = [
     { "name": "장판경감 %", "mat": "목재", "pot": 4, "cost": 15, "cat": "Enhance Defense", "type": "a", nonega: true, max: BONUS_STEPS },
 
 
-    { "name": "명중율", "mat": "약품", "pot": 10, "cost": 50, "cat": "Enhance Accuracy", "type": "w", bonus: 2, bonusratio: 1, bonusdeduction: 1 },
+    { "name": "명중율", "mat": "약품", "pot": 10, "cost": 50, "cat": "Enhance Accuracy", "type": "w", bonus: 2, bonusratio: 2 / 3 },
     { "name": "명중율 %", "mat": "약품", "pot": 20, "cost": 100, "cat": "Enhance Accuracy", "type": "w" },
 
-    { "name": "회피", "mat": "천", "pot": 10, "cost": 50, "cat": "Enhance Dodge", "type": "a", bonus: 2, bonusratio: 1, bonusdeduction: 1 },
+    { "name": "회피", "mat": "천", "pot": 10, "cost": 50, "cat": "Enhance Dodge", "type": "a", bonus: 2, bonusratio: 2 / 3 },
     { "name": "회피 %", "mat": "천", "pot": 20, "cost": 100, "cat": "Enhance Dodge", "type": "a" },
 
     { "name": "ASPD", "mat": "천", "pot": 1, "cost": "1.49", "cat": "Enhance Speed", "type": "u", bonus: 16 },
@@ -75,18 +75,18 @@ const OPTIONS = [
     { "name": "땅 속성에 %유리", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "w", bonus: 1, bonusratio: 1 / 3  },
     { "name": "빛 속성에 %유리", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "w", bonus: 1, bonusratio: 1 / 3  },
     { "name": "어둠 속성에 %유리", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "w", bonus: 1, bonusratio: 1 / 3  },
-    { "name": "불 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
-    { "name": "바람 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
-    { "name": "바람 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
-    { "name": "땅 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
-    { "name": "빛 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
-    { "name": "어둠 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 1, bonusdeduction: 1 },
+    { "name": "불 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
+    { "name": "바람 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
+    { "name": "바람 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
+    { "name": "땅 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
+    { "name": "빛 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
+    { "name": "어둠 내성 %", "mat": "마소", "pot": 5, "cost": 25, "cat": "Enhance Elements", "type": "a", bonus: 1, bonusratio: 2 / 3 },
 
     { "name": "이상 내성 %", "mat": "마소", "pot": 20, "cost": 100, "cat": "Special Enhancement", "type": "u" },
     { "name": "Guard 회복 %", "mat": "마소", "pot": 20, "cost": 100, "cat": "Special Enhancement", "type": "u" },
     { "name": "Guard율 %", "mat": "마소", "pot": 20, "cost": 100, "cat": "Special Enhancement", "type": "u" },
     { "name": "Avoid 회복 %", "mat": "마소", "pot": 20, "cost": 100, "cat": "Special Enhancement", "type": "u" },
-    { "name": "어그로 %", "mat": "마소", "pot": 6, "cost": "33.49", "cat": "Special Enhancement", "type": "u", max: 15, max_only: true, bonus: 1, bonusratio: 0.5},
+    { "name": "어그로 %", "mat": "마소", "pot": 6, "cost": "33.49", "cat": "Special Enhancement", "type": "u", max: 15, max_only: true, bonus: 1, bonusratio: 2 / 5},
 
     { "name": "불 속성", "mat": "마소", "pot": 100, "cost": 150, "cat": "Awaken Elements", "type": "e", max: 1, nonega: true },
     { "name": "물 속성", "mat": "마소", "pot": 100, "cost": 150, "cat": "Awaken Elements", "type": "e", max: 1, nonega: true },
